@@ -1,0 +1,238 @@
+
+:root{
+    --colorletras-No1: black;
+    --colorletras-No2:white;
+    --background-colorcontacto:#575151 ;
+    --background-imagendefondo:url("img/fondo.jpg");
+    --color-botones:#406d8d;
+    --tipodeletras: 'Times New Roman';
+    --fondomenu:#868585;
+  }
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+  *{
+      margin: 0;
+      padding:0;
+      font-family: 'Open Sans';
+  }
+  
+  header{
+      background: url(https://media.istockphoto.com/id/1350788409/es/foto/fondo-de-color-rosa.jpg?s=612x612&w=0&k=20&c=o8BAXrcpQCgZ8_jSaaenvVLLP3O44FTOd_meuMCoADI=);
+      background-size: cover;
+      background-position:center;
+      height: 200px;
+  }
+  header h1{
+    
+      text-align: center;
+      top: 30px;
+      font-size: 50px;
+      /* background-color: #000; */
+      padding: 30px 0;
+      color: #000;
+  }
+  
+.atras a{
+  display: flex;
+  text-decoration: none;
+  color: #353232;
+  margin-left: 3%;
+  margin-top: 20px;
+  
+}
+  .contenedor{
+      max-width: 1300px;
+      padding: 10px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+     
+      /* oculto lo que queda fuera del .contenedor */
+      contain: paint;
+      
+  }
+  /* SECCION CONTENEDOR DE ITEMS */
+  .contenedor .contenedor-items{
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-gap:30px;
+      grid-row-gap: 30px;
+      /* width: 60%; */
+      width: 100%;
+      transition: .3s;
+  }
+  .item img:hover{
+    transform: scale(2);
+    
+  }
+
+
+   .item a{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: var(--color-botones);
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+    text-decoration: none;
+   }
+  
+  .contenedor .contenedor-items .item{
+      max-width: 200px;
+      margin: auto;
+      border:  var(--color-botones);
+      border-radius: 10px;
+      padding: 20px;
+      transition: .3s;
+      height: 300px;
+     
+  }
+  .contenedor .contenedor-items .item .img-item{
+      width: 100%;
+  
+  }
+  .contenedor .contenedor-items .item:hover{
+      box-shadow: 0 0 20px #151115;
+      scale: 1.05;
+  }
+  .contenedor .contenedor-items .item .titulo-item{
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+  }
+  .contenedor .contenedor-items .item .precio-item{
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+  }
+  .item img{
+    height: 60%;
+    width: 100%;
+  }
+
+  .item h5{
+    color: rgb(214, 120, 172);
+  }
+.item del{
+    color: #0e578b;
+}
+
+
+  .contenedor .contenedor-items .item .boton-item{
+      display: block;
+      margin: 10px auto;
+      border: none;
+      background-color: var(--color-botones);
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+      
+   /* Bottom de deslizar hacia riba */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 99;
+  transition: opacity 1s, visibility 1s;
+}
+
+#scrollToTopBtn.show {
+  display: block;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--color-botones);
+}
+
+
+   
+
+footer {
+    background-color: var(--background-colorcontacto); /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 30px 0; /* Espaciado interno */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los enlaces */
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Estilos para los iconos de redes sociales */
+  .social-icons {
+    display: flex;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons li a {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  /* Estilos para el pie de página inferior */
+  .footer-bottom {
+    background-color: #706969; /* Color de fondo */
+    padding: 10px 0; /* Espaciado interno */
+    text-align: center;
+  }
+  
+  
+  /* SECCION RESPONSIVE */
+  @media screen and (max-width: 850px) {
+      .contenedor {
+        display: block;
+      }
+      .contenedor-items{
+          width: 100% !important;
+      }
+      .carrito{
+          width: 100%;
+      }
+    }
